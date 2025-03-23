@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Register</h1>
+        <form method="post">
+            <select name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="tutor">Tutor</option>
+                <option value="learner">Learner</option>
+            </select>
+            <input type="text" name="address" placeholder="Wallet Address" required>
+            <input type="text" name="subjects" placeholder="Subjects (e.g., Math,Science)" required>
+            <input type="text" name="availability" placeholder="Availability (e.g., 5PM-7PM)" required>
+            <button type="submit">Register</button>
+        </form>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

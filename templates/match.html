@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find a Tutor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Find a Tutor</h1>
+        <form method="post">
+            <input type="text" name="subjects" placeholder="Subjects (e.g., Math,Science)" required>
+            <input type="text" name="availability" placeholder="Availability (e.g., 5PM-7PM)" required>
+            <button type="submit">Find Tutor</button>
+        </form>
+        {% if tutor %}
+            <h2>Matched Tutor</h2>
+            <p><strong>Tutor Address:</strong> {{ tutor }}</p>
+            <p><strong>Subjects:</strong> {{ subjects | join(', ') }}</p>
+            <p><strong>Availability:</strong> {{ availability }}</p>
+            <form action="/create_session" method="post">
+                <input type="hidden" name="tutor" value="{{ tutor }}">
+                <input type="hidden" name="subject" value="{{ subjects[0] }}">
+                <input type="text" name="payment" placeholder="Payment (in wei, e.g., 10000000000000000)" required>
+                <button type="submit">Create Session</button>
+            </form>
+        {% endif %}
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

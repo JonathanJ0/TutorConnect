@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Created</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Session Created</h1>
+        <p><strong>Transaction Hash:</strong> {{ tx_hash }}</p>
+        <p><a href="/">Back to Home</a></p>
+    </div>
+    {% if error %}
+    <div class="error">{{ error }}</div>
+{% endif %}
+
+{% if success %}
+    <div class="success">
+        Transaction submitted successfully!<br>
+        Transaction hash: {{ tx_hash }}
+    </div>
+{% endif %}
+</body>
+</html>

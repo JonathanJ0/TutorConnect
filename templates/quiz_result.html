@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Quiz Result</h1>
+        <p>{{ result }}</p>
+        <p><strong>Score:</strong> {{ score }}</p>
+        <p><strong>Transaction Hash:</strong> {{ tx_hash }}</p>
+        <form action="/quiz" method="post">
+            <input type="hidden" name="subject" value="{{ subject }}">
+            <button type="submit">Take Another Quiz in {{ subject }}</button>
+        </form>
+        <p><a href="/quiz">Choose Another Subject</a></p>
+        <p><a href="/">Back to Home</a></p>
+    </div>
+</body>
+</html>
