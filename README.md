@@ -1,8 +1,8 @@
-# LearnConnectWise - Peer-to-Peer Learning Platform
+# TutorConnect - Peer-to-Peer Learning Platform
 
 ## About the Project
 
-LearnConnectWise is a revolutionary peer-to-peer learning platform that connects learners with mentors in a decentralized environment. Built on modern web technologies and blockchain principles, our platform facilitates seamless knowledge sharing and skill development.
+TutorConnect is a revolutionary peer-to-peer learning platform that connects learners with mentors in a decentralized environment. Built on modern web technologies and blockchain principles, our platform facilitates seamless knowledge sharing and skill development.
 
 ## Vision
 
